@@ -1,0 +1,22 @@
+INDEX 10 10;
+
+ORIGINAL 0;
+ABSOLUTE;
+LINER;
+DIAMETER;
+TOOL 1;
+MOTOR start_clockwise;
+
+JUMP (,,2);
+JUMP (35,,);
+GLIDE (26,,0,F=100);
+TURN counter_clockwise (30,,-2,I=2);
+GLIDE (30,,-20);
+GLIDE (40,,-25);
+GLIDE (40,,-35);
+GLIDE (50,,);
+JUMP (,,50);
+
+MOTOR stop;
+MOTOR return;
+
