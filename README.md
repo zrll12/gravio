@@ -1,8 +1,20 @@
-# Gravio
+<div align="center">
+    <h1> Gravio </h1>
+</div>
 
-Gravio (GRO), A G-code language RISC (Reduced Instruction Set Computer) style assembly syntax.
+<p align="center">
+    <b>
+	English | 
+        <a href="./README_CN.md">简体中文</a>
+    </b>
+</p>
 
-Example:
+Gravio (GRO) is a language that employs RISC (Reduced Instruction Set Computer) style assembly syntax, allowing for easy code writing that can be compiled into G-code, thereby simplifying the CNC (Computer Numerical Control) programming process.
+
+## Example
+
+### G-code Input
+
 ```gcode
 N10 G54 G90 G94 G23;
 N20 T1 M03;
@@ -18,7 +30,9 @@ N110 G00 Z50;
 N120 M05;
 N130 M02;
 ```
-Can be compiled to:
+
+### Compiled Gravio Output
+
 ```gravio
 ORIGINAL 0;
 ABSOLUTE;
@@ -40,3 +54,24 @@ JUMP (,,50);
 MOTOR stop;
 MOTOR return;
 ```
+
+## Features
+
+- **User-friendly**: Intuitive assembly-style syntax that is easy to read.
+- **Error handling**：Provides detailed error messages.
+
+## Usage
+
+To use Gravio, you need to set up a Rust environment. Please follow these steps:
+
+- Clone the repository.
+- Ensure Rust and Cargo are installed.
+- Run `cargo clippy` to check the code.
+- Use `cargo build` to compile the project.
+- Use the provided parser to convert Gravio code into G-code.
+
+## TODO
+
+ - [ ] Dialect parsing: Introduce rules for specific dialects to enhance adaptability.
+ - [ ] Optimize interpreter logic: Simplify the interpreter for improved performance.
+ - [ ] Unit testing: Ensure stability and correctness.
